@@ -1,0 +1,62 @@
+@startuml
+
+actor Actor
+participant "Màn Hình Login" as MHLogin
+participant "Web Server" as Server
+participant "Database" as DB
+
+== LOGIN ==
+Actor -> MHLogin: Bấm nút đăng nhập
+MHLogin -> Server: Gửi yêu cầu đăng nhập
+Server -> DB: Tìm tài khoản tương ứng
+
+alt Nếu thông tin không hợp lệ
+    DB -> Server: Thông tin không hợp lệ
+    Server -> MHLogin: Thông tin không hợp lệ
+    MHLogin -> Actor: Yêu cầu nhập lại
+else Nếu thông tin hợp lệ
+    DB -> Server: Thông tin hợp lệ
+    Server -> MHLogin: Thông tin hợp lệ
+    MHLogin -> Actor: Chuyển sang màn hình chính
+end
+
+== CREATE ==
+Actor -> MHLogin: Nhấn nút gửi thông tin
+MHLogin -> Server: Gửi thông tin tài khoản
+Server -> DB: Gửi yêu cầu tạo tài khoản
+
+alt Nếu tạo tài khoản thành công
+    DB -> Server: Thành công
+    Server -> MHLogin: Tạo tài khoản thành công
+    MHLogin -> Actor: Hiển thị thông báo tạo người dùng thành công
+else Nếu tạo tài khoản thất bại
+    DB -> Server: Thất bại
+    Server -> MHLogin: Tạo tài khoản thất bại
+    MHLogin -> Actor: Hiển thị thông báo lỗi
+end
+
+== READ ==
+Actor -> MHLogin: Nhấn chọn đề thi
+MHLogin -> Server: Yêu cầu thông tin đề thi
+Server -> DB: Lấy thông tin đề thi
+DB -> Server: Trả về thông tin đề thi
+Server -> MHLogin: Trả về thông tin đề thi
+MHLogin -> Actor: Chuyển sang trang đề thi
+
+== DELETE ==
+Actor -> MHLogin: Bấm nút xóa tài khoản
+MHLogin -> Server: Gửi yêu cầu xóa tài khoản
+Server -> DB: Gửi yêu cầu xóa tài khoản
+DB -> Server: Xóa thành công
+Server -> MHLogin: Xóa thành công
+MHLogin -> Actor: Thoát khỏi màn hình chính
+
+== UPDATE ==
+Actor -> MHLogin: Bấm nút sửa tài khoản
+MHLogin -> Server: Gửi yêu cầu sửa thông tin
+Server -> DB: Gửi yêu cầu cập nhật thông tin
+DB -> Server: Sửa thành công
+Server -> MHLogin: Sửa thành công
+MHLogin -> Actor: Hiển thị thông báo sửa thông tin thành công
+
+@enduml
