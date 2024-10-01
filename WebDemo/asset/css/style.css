@@ -1,0 +1,200 @@
+/* Global styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: black;
+}
+
+.section-title {
+  color: #6d28d9;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Form layout */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+input[type="email"],
+input[type="date"] {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 95%;
+}
+input[type="text"] {
+  width: calc(100% - 20px);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Gender group styling */
+.gender-group {
+  display: flex;
+  width: 48%;
+  vertical-align: top;
+  margin-bottom: 20px;
+  flex-direction: row;
+}
+
+/* Float layout for fields */
+.float-left {
+  float: left;
+  width: 48%;
+  margin-right: 2%;
+}
+
+.float-right {
+  float: right;
+  width: 48%;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Address styling */
+
+.address-group-container {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  gap: 10px;
+}
+.address-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.address-group select {
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Occupation section styling */
+.occupation-group {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.occupation-group label {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Checkbox and radio button styling */
+.checkbox-group {
+  margin-bottom: 20px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.delivery-group {
+  display: flex;
+  align-content: space-between;
+  margin-bottom: 20px;
+}
+
+.delivery-group label {
+  width: 20%;
+}
+
+/* File upload section styling */
+.image-upload-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.image-upload-group .anh3x4,
+.image-upload-group .truocCCCD,
+.image-upload-group .sauCCCD {
+  width: 30%;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-upload-group img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.image-upload-group input[type="file"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Submit button styling */
+.submit-group {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: color #000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0d0d;
+}

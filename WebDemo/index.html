@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <title>TOEIC Registration Form</title>
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <div class="container">
+      <h1>Đăng kí thi TOEIC</h1>
+
+      <!-- Personal Information Section -->
+      <div class="section-title">Thông tin cá nhân</div>
+      <div class="form-group clearfix">
+        <div class="float-left">
+          <label for="fullname">Họ và tên thí sinh</label>
+          <input type="text" id="fullname" name="fullname" />
+        </div>
+        <div class="float-right">
+          <label for="dob">Ngày sinh</label>
+          <input type="date" id="dob" name="dob" />
+        </div>
+      </div>
+
+      <div class="form-group clearfix">
+        <div class="float-left">
+          <label>Giới tính</label>
+          <div class="gender-group">
+            <label><input type="radio" name="gender" value="Nam" /> Nam</label>
+            <label><input type="radio" name="gender" value="Nữ" /> Nữ</label>
+          </div>
+        </div>
+        <div class="float-right">
+          <label for="id_type">Loại giấy tờ đăng ký thi</label>
+          <select id="id_type" name="id_type">
+            <option value="">Chọn</option>
+            <option value="cccd">Căn cước công dân</option>
+            <option value="hc">Hộ chiếu</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group clearfix">
+        <div class="float-left">
+          <label for="id_number">Căn cước công dân</label>
+          <input type="text" id="id_number" name="id_number" />
+        </div>
+        <div class="float-right">
+          <label for="id_date">Ngày cấp</label>
+          <input type="date" id="id_date" name="id_date" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="id_location">Nơi cấp</label>
+        <input type="text" id="id_location" name="id_location" />
+      </div>
+
+      <!-- Address Section -->
+      <label for="address"> Địa chỉ</label>
+      <div class="address-group-container">
+        <div class="address-group">
+          <label for="province">Tỉnh/Thành phố</label>
+          <select id="province" name="province">
+            <option value="">Chọn</option>
+          </select>
+        </div>
+        <div class="address-group">
+          <label for="district">Quận/Huyện</label>
+          <select id="district" name="district">
+            <option value="">Chọn</option>
+          </select>
+        </div>
+        <div class="address-group">
+          <label for="ward">Xã/Phường</label>
+          <select id="ward" name="ward">
+            <option value="">Chọn</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group clearfix">
+        <div class="float-left">
+          <label for="phone">Số điện thoại</label>
+          <input type="text" id="phone" name="phone" />
+        </div>
+        <div class="float-right">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+      </div>
+
+      <!-- Occupation Section -->
+      <label for="nghenghiep">Nghề nghiệp</label>
+      <div class="occupation-group">
+        <div class="occupation-group-1">
+          <label
+            ><input type="checkbox" name="occupation" value="student" /> Học
+            sinh, sinh viên</label
+          >
+          <label
+            ><input type="checkbox" name="occupation" value="govt_employee" />
+            Công chức, viên chức</label
+          >
+          <label
+            ><input type="checkbox" name="occupation" value="office_worker" />
+            Nhân viên văn phòng</label
+          >
+        </div>
+        <div class="occupation-group-2">
+          <label
+            ><input type="checkbox" name="occupation" value="business" /> Kinh
+            doanh, tự do</label
+          >
+          <label
+            ><input type="checkbox" name="occupation" value="housewife" /> Nội
+            trợ</label
+          >
+          <label
+            ><input type="checkbox" name="occupation" value="doctor" /> Bác
+            sĩ</label
+          >
+        </div>
+        <div class="occupation-group-3">
+          <label
+            ><input type="checkbox" name="occupation" value="unemployed" /> Thất
+            nghiệp</label
+          >
+          <label
+            ><input type="checkbox" name="occupation" value="teacher" /> Giáo
+            viên</label
+          >
+          <label
+            ><input type="checkbox" name="occupation" value="other" />
+            Khác</label
+          >
+        </div>
+      </div>
+
+      <!-- Goal Section -->
+      <div class="form-group clearfix">
+        <label for="goal">Mục đích dự thi</label>
+        <div class="goal-group">
+          <label
+            ><input type="checkbox" name="goal" value="evaluate" /> Đánh giá
+            trình độ</label
+          >
+          <label
+            ><input type="checkbox" name="goal" value="graduation" /> Xét tốt
+            nghiệp</label
+          >
+          <label
+            ><input type="checkbox" name="goal" value="abroad" /> Du học</label
+          >
+          <label
+            ><input type="checkbox" name="goal" value="other" /> Khác</label
+          >
+        </div>
+      </div>
+
+      <!-- Hình thức nhận bằng -->
+      <label for="hinhthuc">Hình thức nhận bằng</label>
+      <div class="delivery-group">
+        <label
+          ><input type="radio" name="delivery" value="counter" /> Nhận tại
+          quầy</label
+        >
+        <label
+          ><input type="radio" name="delivery" value="mail" /> Bưu điện</label
+        >
+      </div>
+
+      <!-- File Upload Section -->
+      <div class="image-upload-group">
+        <div class="anh3x4">
+          <label for="photo">Hình 3x4</label>
+          <img id="upload-image-0" src="" alt="" />
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+            onchange="previewImage(event)"
+          />
+        </div>
+        <div class="truocCCCD">
+          <label for="id_front">Mặt trước CCCD</label>
+          <img id="upload-image-1" src="" alt="" />
+          <input
+            type="file"
+            id="id_front"
+            name="id_front"
+            accept="image/*"
+            onchange="previewImage(event)"
+          />
+        </div>
+        <div class="sauCCCD">
+          <label for="id_back">Mặt sau CCCD</label>
+          <img id="upload-image-2" src="" alt="" />
+          <input
+            type="file"
+            id="id_back"
+            name="id_back"
+            accept="image/*"
+            onchange="previewImage(event)"
+          />
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="submit-group">
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>
