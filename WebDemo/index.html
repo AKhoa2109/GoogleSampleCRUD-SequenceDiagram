@@ -175,44 +175,44 @@
       <!-- File Upload Section -->
       <div class="image-upload-group">
         <div class="anh3x4">
-          <label for="photo">Hình 3x4</label>
-          <img id="upload-image-0" src="" alt="" />
-          <input
-            type="file"
-            id="photo"
-            name="photo"
-            accept="image/*"
-            onchange="previewImage(event)"
-          />
+            <label for="photo">Hình 3x4</label>
+            <img id="upload-image-0" src="" alt="" />
+            <input
+                type="file"
+                id="photo"
+                name="photo"
+                accept="image/*"
+                onchange="previewImage(event, 'upload-image-0')"
+            />
         </div>
         <div class="truocCCCD">
-          <label for="id_front">Mặt trước CCCD</label>
-          <img id="upload-image-1" src="" alt="" />
-          <input
-            type="file"
-            id="id_front"
-            name="id_front"
-            accept="image/*"
-            onchange="previewImage(event)"
-          />
+            <label for="id_front">Mặt trước CCCD</label>
+            <img id="upload-image-1" src="" alt="" />
+            <input
+                type="file"
+                id="id_front"
+                name="id_front"
+                accept="image/*"
+                onchange="previewImage(event, 'upload-image-1')"
+            />
         </div>
         <div class="sauCCCD">
-          <label for="id_back">Mặt sau CCCD</label>
-          <img id="upload-image-2" src="" alt="" />
-          <input
-            type="file"
-            id="id_back"
-            name="id_back"
-            accept="image/*"
-            onchange="previewImage(event)"
-          />
+            <label for="id_back">Mặt sau CCCD</label>
+            <img id="upload-image-2" src="" alt="" />
+            <input
+                type="file"
+                id="id_back"
+                name="id_back"
+                accept="image/*"
+                onchange="previewImage(event, 'upload-image-2')"
+            />
         </div>
-      </div>
-
-      <!-- Submit Button -->
-      <div class="submit-group">
-        <button type="submit">Submit</button>
-      </div>
     </div>
+    
+    <!-- Submit Button -->
+    <div class="submit-group">
+        <button type="submit">Submit</button>
+    </div>
+    
   </body>
 </html>
